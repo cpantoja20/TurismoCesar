@@ -1,1 +1,45 @@
-<p>persona-registro works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Registro de Personas</h2>
+            <form>
+                <div class="form-group">
+                    <label>Identificacion</label>
+                    <input type="number" name="identificacion" [(ngModel)]="persona.identificacion"
+                        class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" [(ngModel)]="persona.nombre" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Apellidos</label>
+                    <input type="text" name="apellidos" [(ngModel)]="persona.apellidos" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Sexo</label>
+                <!--    <input type="text" name="sexo" [(ngModel)]="persona.sexo" class="form-control" /> -->
+                    <select class="form-select" aria-label="Default select example" name="sexo"
+                        [(ngModel)]="persona.sexo" class="form-control">
+                    
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Edad</label>
+                    <input type="number" name="edad" [(ngModel)]="persona.edad" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Pulsacion</label>
+                    <input type="number" name="pulsacion" [(ngModel)]="persona.pulsacion" class="form-control" disabled />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-success mr-1" (click)="add()">Registrar</button>
+                    <button class="btn btn-secondary" type="reset">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
