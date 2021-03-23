@@ -17,23 +17,28 @@
                     <input type="text" name="apellidos" [(ngModel)]="persona.apellidos" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label>Sexo</label>
-                <!--    <input type="text" name="sexo" [(ngModel)]="persona.sexo" class="form-control" /> -->
-                    <select class="form-select" aria-label="Default select example" name="sexo"
-                        [(ngModel)]="persona.sexo" class="form-control">
+                    <label>Hotel</label>
+                <!--    <input type="text" name="sexo" [(ngModel)]="persona.hotel" class="form-control" /> -->
+                    <select class="form-select" aria-label="Default select example" name="hotel"
+                        [(ngModel)]="persona.hotel" class="form-control">
                     
-                        <option value="Femenino">Femenino</option>
-                        <option value="Masculino">Masculino</option>
+                        <option value="BuenaVista">HOTEL BUENAVISTA</option>
+                        <option value="BalcondelCesar">HOTEL BALCON DEL CESAR</option>
+                        <option value="Chimila">HOTEL CHIMILA </option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label>Edad</label>
-                    <input type="number" name="edad" [(ngModel)]="persona.edad" class="form-control" />
+                    <label>Fecha Hospedaje</label>
+                    <input type="date" name="fechaHospedaje" [(ngModel)]="persona.fechaHospedaje" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label>Pulsacion</label>
-                    <input type="number" name="pulsacion" [(ngModel)]="persona.pulsacion" class="form-control" disabled />
+                    <label>Temporada</label>
+                    <input type="text" name="temporada" [(ngModel)]="persona.temporada" class="form-control" disabled />
+                </div>
+                <div class="form-group">
+                    <label>Valor</label>
+                    <input type="number" name="valor" [(ngModel)]="persona.valor" class="form-control" disabled />
                 </div>
                 <div class="text-center">
                     <button class="btn btn-success mr-1" (click)="add()">Registrar</button>
