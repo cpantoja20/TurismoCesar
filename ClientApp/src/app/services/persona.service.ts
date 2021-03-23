@@ -20,4 +20,5 @@ export class PersonaService {
     localStorage.setItem('datos', JSON.stringify(personas));
   }
 
+  
 }

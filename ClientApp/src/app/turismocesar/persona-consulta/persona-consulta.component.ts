@@ -10,7 +10,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 export class PersonaConsultaComponent implements OnInit {
 
   personas: Persona[];
-  searchText:string;
+  searchText: string;
 
   constructor(private personaService: PersonaService) { }
 
