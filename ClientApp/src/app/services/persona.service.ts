@@ -11,7 +11,10 @@ export class PersonaService {
     return JSON.parse(localStorage.getItem('datos'));
   }
   post(persona: Persona) {
-    persona.valor = (persona.edad * 210) / 100;
+
+    
+
+    persona.valor = (persona.temporada * 210) / 100;
     let personas: Persona[] = [];
     if (this.get() != null) {
       personas = this.get();
@@ -20,6 +23,9 @@ export class PersonaService {
     localStorage.setItem('datos', JSON.stringify(personas));
   }
 
-  
-  
+
+
 }
+
+
+

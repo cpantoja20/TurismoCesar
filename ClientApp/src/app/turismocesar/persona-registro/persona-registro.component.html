@@ -30,7 +30,7 @@
 
                 <div class="form-group">
                     <label>Fecha Hospedaje</label>
-                    <input type="date" name="fechaHospedaje" [(ngModel)]="persona.fechaHospedaje" class="form-control" />
+                    <input type="date" id = "fechaHospedaje" name="fechaHospedaje" [(ngModel)]="persona.fechaHospedaje" class="form-control" (onselect)="dia()"/>
                 </div>
                 <div class="form-group">
                     <label>Temporada</label>
@@ -47,4 +47,8 @@
             </form>
         </div>
     </div>
+    <script type="text/javascript">
+        var fecha = document.querySelector('#fechaHospedaje')
+        console.log(fecha)
+    </script>
 </div>
