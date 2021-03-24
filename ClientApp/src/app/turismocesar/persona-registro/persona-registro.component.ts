@@ -37,16 +37,19 @@ export class PersonaRegistroComponent implements OnInit {
      }
    }*/
 
-  dia() {
-    
-    var semanaDia = fechaHospedaje.value.getDay();
-    var temporadas = ""
+  dateOfWeek(persona: Persona) {
+    if (persona.fechaHospedaje) {
+      const fecha = new Date(persona.fechaHospedaje)
+      const dia = fecha.getDay()
 
-    if (semanaDia == 0 || semanaDia == 5 || semanaDia == 6) {
-      temporadas = "Temporada Alta"
-    } else {
-      temporadas = "Temporada Baja"
+
+      if (dia == 0 || dia == 5 || dia == 6) {
+        persona.temporada = "Temporada Alta"
+      } else {
+        persona.temporada = "Temporada Baja"
+      }
+
+
     }
-    console.log(temporadas)
   }
 }

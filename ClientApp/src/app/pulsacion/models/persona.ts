@@ -5,7 +5,7 @@ export class Persona {
     apellidos: string;
     hotel: string;
     fechaHospedaje: Date;
-    valor : number;
-  temporada: number;
+    valor : string;
+    temporada: string;
     
 }
