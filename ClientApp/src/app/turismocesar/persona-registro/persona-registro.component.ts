@@ -26,30 +26,7 @@ export class PersonaRegistroComponent implements OnInit {
     this.personaService.post(this.persona);
   }
 
-  /* dia(temporada) {
-     temporada = new Date();
-     this.dia = temporada.getDay();
-     if (temporada == 0 || temporada == 5 || temporada == 6) {
-       this.persona.temporada;
- 
-     } else {
- 
-     }
-   }*/
-
-  dateOfWeek(persona: Persona) {
-    if (persona.fechaHospedaje) {
-      const fecha = new Date(persona.fechaHospedaje)
-      const dia = fecha.getDay()
 
 
-      if (dia == 0 || dia == 5 || dia == 6) {
-        persona.temporada = "Temporada Alta"
-      } else {
-        persona.temporada = "Temporada Baja"
-      }
 
-
-    }
-  }
 }

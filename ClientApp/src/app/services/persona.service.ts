@@ -18,13 +18,26 @@ export class PersonaService {
       if (dia == 0 || dia == 5 || dia == 6 && persona.hotel == "BuenaVista") {
         persona.temporada = "Temporada Alta";
         persona.valor = "$ 100.000";
+      } else if (dia == 1 || dia == 2 || dia == 3 || dia == 4 && persona.hotel == "Chimila") {
+        persona.temporada = "Temporada Baja";
+        persona.valor = "$ 78.000";
+      } else if (dia == 0 || dia == 5 || dia == 6 && persona.hotel == "BalcondelCesar") {
+        persona.temporada = "Temporada Alta"
+        persona.valor = "$ 95.000"
+      } else if (dia == 0 || dia == 5 || dia == 6 && persona.hotel == "BalcondelCesar") {
+        persona.temporada = "Temporada Alta"
+        persona.valor = "$ 95.000"
+      } else if (dia == 1 || dia == 2 || dia == 3 || dia == 4 && persona.hotel == "BuenaVista") {
+        persona.temporada = "Temporada Baja";
+        persona.valor = "$ 80.000";
       } else {
-        persona.temporada = "Temporada Baja"
-        persona.valor = "$ 80.000"
+        persona.temporada = "Temporada Alta"
+        persona.valor = "$ 85.000"
       }
+
     }
-    
-    
+
+
 
     let personas: Persona[] = [];
     if (this.get() != null) {
@@ -47,7 +60,7 @@ export class PersonaService {
 
 }
 
-  
+
 
 
 
